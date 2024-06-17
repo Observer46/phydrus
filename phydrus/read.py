@@ -213,7 +213,8 @@ def _read_file(path, start, end="end", usecols=None, idx_col=None,
         # Read data into a Pandas DataFrame
         data = read_csv(file, skiprows=s, nrows=e - s - 2, usecols=usecols,
                         index_col=idx_col, skipinitialspace=True,
-                        delim_whitespace=True)
+                        engine='python',
+                        delim_whitespace=True, on_bad_lines=lambda x: x)
 
         if remove_first_row:
             data = data.drop(index=data.index[0]).apply(to_numeric,
