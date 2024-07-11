@@ -33,7 +33,7 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Topic :: Scientific/Engineering :: Hydrology',
     ],
-    install_requires=['numpy>=1.15', 'matplotlib>=2.0', 'pandas>=1.0',
+    install_requires=['numpy>=1.15', 'matplotlib>=2.0', 'pandas>=1.4',
                       'scipy>=1.1'],
     packages=find_packages(exclude=[]),
     package_data={"source": ["hydrus", "hydrus.exe"], },
